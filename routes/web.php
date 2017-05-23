@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/', 'FrontController@index')->name('home');
+Route::get('/shirts', 'FrontController@shirts')->name('shirts');
+Route::get('/shirt/{id}', 'FrontController@shirt')->name('shirt');
